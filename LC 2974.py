@@ -1,9 +1,13 @@
 class Solution(object):
-    def mostWordsFound(self, sentences):
-        count=[]
-        for i in sentences:
-            x=len(i.split())
-            count.append(x)
-        t=max(count)
-        return t
-solution=Solution()
+    def numberGame(self, nums):
+        arr = []
+        while nums: 
+            alice = min(nums)
+            nums.remove(alice)  
+            bob = min(nums)
+            nums.remove(bob)
+            arr.append(bob)
+            arr.append(alice)
+        return arr
+solution = Solution()
+
